@@ -16,5 +16,8 @@
     "dustjs-linkedin": "*",
     "express": "*",
     "pg": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
