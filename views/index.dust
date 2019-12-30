@@ -1,36 +1,35 @@
 {>"layout" /}
 
-{<body}
-
-<button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#addRecipe" aria-expanded="false" aria-controls="addRecipe" >
+{<body} <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#addRecipe"
+  aria-expanded="false" aria-controls="addRecipe">
   Add Recipe
-</button>
-<br/>
-<div class="collapse" id="addRecipe">
-  <form method="post" action="/add">
-    <div class="form-group">
-      <label>Recipe Name</label>
-      <input type="text" class="form-control" name="name"/>
-    </div>
-    <div class="form-group">
-      <label>Ingredients</label>
-      <textarea  class="form-control" name="ingredients"></textarea>
-    </div>
-    <div class="form-group">
-      <label>Directions</label>
-      <textarea  class="form-control" name="directions"></textarea>
-    </div>
-   <input type="submit" class="btn btn-primary" value="Save"/> 
-</form>
-</div>
+  </button>
+  <br />
+  <div class="collapse" id="addRecipe">
+    <form method="post" action="/add">
+      <div class="form-group">
+        <label>Recipe Name</label>
+        <input type="text" class="form-control" name="name" />
+      </div>
+      <div class="form-group">
+        <label>Ingredients</label>
+        <textarea class="form-control" name="ingredients"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Directions</label>
+        <textarea class="form-control" name="directions"></textarea>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Save" />
+    </form>
+  </div>
 
-  
+
   {#recipes}
     <div class="card card-body">
       <div class="d-flex flex-row">  
         <h4 >{name}</h4>
         <button class="ml-auto btn btn-secondary " data-toggle="collapse" data-target="#recipe_{id}" type="button" aria-expanded="false" aria-controls="recipe_{id}">
-         <i class="fa fa-chevron-down"></i>View Recipe
+         <i class="fa fa-chevron-down fa-2x"></i> View Recipe
         </button>
       </div>
 
@@ -41,16 +40,16 @@
             <p><strong>Directions:</strong>{directions}</p>
             <br/>
             <hr/>
-            <button class="btn btn-secondary edit-recipe" 
+            <button class="btn btn-secondary mr-2 edit-recipe" 
             data-toggle="modal" data-target="#editFormModal"
              data-id="{id}"
              data-name="{name}"
              data-ingredients="{ingredients}"
              data-directions="{directions}">
-              <i class="fa fa-pencil "></i>Edit
+              <i class="fa fa-pencil fa-2x"></i> Edit
             </button>
             <button class="btn btn-danger delete-recipe" data-id="{id}">
-              <i class="fa fa-cog"></i>Delete
+              <i class="fa fa-times fa-2x"></i> Delete
             </button>
         </div>
     </div>

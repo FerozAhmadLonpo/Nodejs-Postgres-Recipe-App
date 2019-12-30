@@ -2,3 +2,8 @@ body {
   margin-top: 10px;
   background: #f9f9f9;
 }
+
+.delete-recipe,
+.edit-recipe {
+  padding: 1rem 2rem;
+}
